@@ -1,0 +1,27 @@
+[relay]
+host = 127.0.0.1
+port = 10028
+
+[destination]
+dir = /directory/where/emails/should/be/stored
+# Available timestamp, uuid or subject - default is subject
+format = subject
+
+[filter_any]
+# Filter by any of the headers (if multiple provided)
+#
+# Format: Header = value
+#
+# Example below will make mailgate to store only emails from steven@example.com or to britney@example.com
+# From = steven@example.com
+# To = britney@example.com
+
+[filter_all]
+# Filter by all the headers (if multiple provided)
+# This filter overwrites filter_any.
+#
+# Format: Header = value
+#
+# Example below will make mailgate to store only emails from steven@example.com which were sent to britney@example.com
+# From = steven@example.com
+# To = britney@example.com
